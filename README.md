@@ -1,8 +1,6 @@
 # Angular 2 Company Website Template
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html)
-
-This repository holds Company Website Template for fast implementation of generic company website.
+This repository holds **Company Website Template** for fast implementation of generic company website.
 It is written with Angular 2 with TypeScript, HTML(5), CSS3 with Sass and later on some database stuff
 will be included. Most likely MongoDB. More backend stuff will be added too.
 
@@ -10,9 +8,10 @@ The repository includes source code of decent looking UI with good scalability t
 The menu changes for mobile browsers or when browser width is scaled down.
 
 This project uses [Angular 2 Quickstart Source Code](https://github.com/angular/quickstart) as basis,
-so it may have some bit of left of that project. It also has some features, like Routing, from
-(Angular 2 Tutorial: Tour Of Heroes)[https://angular.io/docs/ts/latest/tutorial/], which is official
-Angular 2 Tutorial.
+so it may have some bit of left of that project. 
+It has also some features, like Routing, from
+[Angular 2 Tutorial: Tour Of Heroes](https://angular.io/docs/ts/latest/tutorial/), 
+which is the official Angular 2 Tutorial.
 
 ## Prerequisites
 
