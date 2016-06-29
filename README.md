@@ -1,7 +1,7 @@
 # Angular 2 Company Website Template
 
 This repository holds **Company Website Template** for fast implementation of generic company website.
-It is written with Angular 2 with TypeScript, HTML(5), CSS3 with Sass and later on some database stuff
+It is written with Angular 2, TypeScript, HTML(5), CSS3, Sass, and later on some database stuff
 will be included. Most likely MongoDB. More backend stuff will be added too.
 
 The repository includes source code of decent looking UI with good scalability to mobile browsers. 
