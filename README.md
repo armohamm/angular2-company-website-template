@@ -1,153 +1,92 @@
-# Angular 2 QuickStart Source
+# Angular 2 Company Website Template
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
+This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html)
 
-It's been extended with testing support so you can start writing tests immediately.
+This repository holds Company Website Template for fast implementation of generic company website.
+It is written with Angular 2 with TypeScript, HTML(5), CSS3 with Sass and later on some database stuff
+will be included. Most likely MongoDB. More backend stuff will be added too.
 
-**This is not the perfect arrangement for your application. It is not designed for production. 
-It exists primarily to get you started quickly with learning and prototyping in Angular 2**
+The repository includes source code of decent looking UI with good scalability to mobile browsers. 
+The menu changes for mobile browsers or when browser width is scaled down.
 
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
+This project uses [Angular 2 Quickstart Source Code](https://github.com/angular/quickstart) as basis,
+so it may have some bit of left of that project. It also has some features, like Routing, from
+(Angular 2 Tutorial: Tour Of Heroes)[https://angular.io/docs/ts/latest/tutorial/], which is official
+Angular 2 Tutorial.
 
 ## Prerequisites
 
 Node.js and npm are essential to Angular 2 development. 
-    
-<a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
-Get it now</a> if it's not already installed on your machine.
- 
-**Verify that you are running at least node `v5.x.x` and npm `3.x.x`**
-by running `node -v` and `npm -v` in a terminal/console window.
-Older versions produce errors.
+For more info on installing them and cloning git this repo, 
+**Check out** [Angular 2 Quickstart Source Code](https://github.com/angular/quickstart) repository.
 
-We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
+This project uses some additional npm packages, which should be installed (globally) as well. 
 
-## Create a new project based on the QuickStart
-
-Clone this repo into new project folder (e.g., `my-proj`).
+List of packages:
 ```bash
-git clone  https://github.com/angular/quickstart  my-proj
-cd my-proj
++-- concurrently@2.1.0      //This allows to run multiple tasks simultaneously when starting local server.
++-- gulp@3.9.1              //It is a build tool, this time used with Sass configuration.
++-- lite-server@2.2.0       //Local database server. Included just in case.
++-- node-sass@3.8.0         //Sass is a tool to make Css writing easier and better. Compiles scss->css.
++-- typescript@1.8.10       //TypeScript package installed just in case.
 ```
 
-We have no intention of updating the source on `angular/quickstart`.
-Discard everything "git-like" by deleting the `.git` folder.
+All packages and their implementation are preconfigured in project's files, 
+so they are necessary to install.
+
+You can install packages globally with npm by typing:
 ```bash
-rm -rf .git  // non-Windows
-rd .git /S/Q // windows
+npm install -g <package>
+```
+For example:
+```bash
+npm install -g concurrently
 ```
 
-### Create a new git repo
-You could [start writing code](#start-development) now and throw it all away when you're done.
-If you'd rather preserve your work under source control, consider taking the following steps.
-
-Initialize this project as a *local git repo* and make the first commit:
+Most recent version of all packages, node.js and npm are used with this project, 
+but just in case, these are the versions of node.js and npm:
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
+node --version: v6.2.1
+npm --version: 3.9.3
 ```
 
-Create a *remote repository* for this project on the service of your choice.
+The rest of the system and tools used:
+* `Windows 10 64bit`    Operating System
+* `Visual Studio Code`  The Editor
+* `Google Chrome`       The Browser
 
-Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
-```bash
-git remote add origin <repo-address>
-git push -u origin master
-```
-## Install npm packages
+## To run this project:
 
-> See npm and nvm version notes above
-
-Install the npm packages described in the `package.json` and verify that it works:
-
-**Attention Windows Developers:  You must run all of these commands in administrator mode**.
-
+1) Install node.js and npm
+2) Install all the packages globally
+3) Clone this Git repository.
+4) Go to repository's folder and run 
 ```bash
 npm install
+```
+5) Run the project
+```bash
 npm start
 ```
 
-The `npm start` command first compiles the application, 
-then simultaneously re-compiles and runs the `lite-server`.
-Both the compiler and the server watch for file changes.
+## Folder structure
 
-Shut it down manually with Ctrl-C.
+This project has self designed structure. 
+All these folders have configured to work this way:
 
-You're ready to write your application.
+```bash
+[app]           // JavaScript files compiled by TypeScript compiler. DO NOT EDIT.
+[css]           // Css files compiled by sass compiler. DO NOT EDIT.
+[html]          // Html files for Angular 2 components. You may edit.
+[images]        // Images. You may edit.
+[sass]          // Sass folder for .scss style files. You may edit.
+[ts]            // TypeScript files. The main Angular2 backbone. You may edit.
+gulpfile.js     // Gulp configuration for runtime Sass->Css compiling. DO NOT EDIT.
+```
 
-### npm scripts
+This is just a guideline, so you know how to work with this project. All the configurations
+are set to **package.json**, **tsconfig.json** and **systemjs.config.js** files.
 
-We've captured many of the most useful commands in npm scripts defined in the `package.json`:
+## More info
 
-* `npm start` - runs the compiler and a server at the same time, both in "watch mode".
-* `npm run tsc` - runs the TypeScript compiler once.
-* `npm run tsc:w` - runs the TypeScript compiler in watch mode; the process keeps running, awaiting changes to TypeScript files and re-compiling when it sees them.
-* `npm run lite` - runs the [lite-server](https://www.npmjs.com/package/lite-server), a light-weight, static file server, written and maintained by
-[John Papa](https://github.com/johnpapa) and
-[Christopher Martin](https://github.com/cgmartin)
-with excellent support for Angular apps that use routing.
-* `npm run typings` - runs the typings tool.
-* `npm run postinstall` - called by *npm* automatically *after* it successfully completes package installation. This script installs the TypeScript definition files this app requires.
-
-Here are the test related scripts:
-* `npm test` - compiles, runs and watches the karma unit tests
-* `npm run webdriver:update` - ONE TIME update for protractor end-to-end (e2e) tests
-* `npm run e2e` - run protractor e2e tests, written in JavaScript (*e2e-spec.js)
-
-## Testing
-
-The QuickStart documentation doesn't discuss testing. 
-This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
-
-These tools are configured for specific conventions described below.
-
-*It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.
-We recommend that you shut down one before starting another.*
-
-### Unit Tests
-TypeScript unit-tests are usually in the `app` folder. Their filenames must end in `.spec`.
-
-Look for the example `app/app.component.spec.ts`.
-Add more `.spec.ts` files as you wish; we configured karma to find them.
-
-Run it with `npm test`
-
-That command first compiles the application, then simultaneously re-compiles and runs the karma test-runner.
-Both the compiler and the karma watch for (different) file changes.
-
-Shut it down manually with Ctrl-C.
-
-Test-runner output appears in the terminal window.
-We can update our app and our tests in real-time, keeping a weather eye on the console for broken tests.
-Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (Ctrl-C) and
-restart it. No worries; it's pretty quick.
-
-The `HTML-Reporter` is also wired in. That produces a prettier output; look for it in `~_test-output/tests.html`.
-
-### End-to-end (E2E) Tests
-
-**BEFORE RUNNING THE FIRST TEST** you must update the Selenium webdriver. Run `npm run webdriver:update`.
-
-E2E tests are usually at the project root, above the `app` folder. 
-Their filenames must end in `e2e-spec.js`.
-
-E2E tests must be written in JavaScript (the author has not figured out how to write them in TS yet).
-
-Look for the example `e2e-spec.ts` in the root folder.
-Add more `e2e-spec.js` files as you wish (although one usually suffices for small projects); 
-we configured protractor to find them.
-
-
-Thereafter, run them with `npm run e2e`.
-
-That command first compiles, then simultaneously starts the Http-Server at `localhost:8080`
-and launches protractor.  
-
-The pass/fail test results appear at the bottom of the terminal window.
-A custom reporter (see `protractor.config.js`) generates a  `./protractor-results.txt` file 
-which is easier to read; this file is excluded from source control.
-
-Shut it down manually with Ctrl-C.
+Please be free to ask. I can be contacted via email.
