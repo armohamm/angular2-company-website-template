@@ -1,0 +1,64 @@
+<nav class="app">
+    <div class="wrapper">
+        <div class="header">
+            <nav class="logo-bar">
+                <div class="margin"></div>
+                <div class="content">
+                    <img src="images/logos/company-logo.png" height="100px">
+                </div>
+                <div class="margin"></div>
+            </nav>
+            <nav class="menu-buttons">
+                <div class="margin"></div>
+                <div class="content">
+                    <a [routerLink]="['Services']">Services</a>
+                    <a [routerLink]="['References']">References</a>
+                    <a [routerLink]="['Company']">Company</a>
+                    <a [routerLink]="['Blog']">Blog</a>
+                    <a [routerLink]="['Contact']">Contact</a>
+                </div>
+                <div class="margin"></div>
+            </nav>
+        </div>
+        <router-outlet></router-outlet>
+        <div class="footer">
+            <p>Footer</p>
+            <br>
+            <br>
+            <br>
+            <img src="images/logos/round-logo-with-ribbon-and-stars.png" width="200px">
+            <br>
+            <br>
+            <br>
+            <p>...really</p>
+        </div>
+    </div>
+</nav>
+<div class="mobile-menu-screen" *ngIf="showMenuScreen">
+    <div class="a-box"><div class="vertical-middle">
+        <a [routerLink]="['Services']" (click)="MenuOff()">Services</a>
+    </div></div>
+    <div class="a-box"><div class="vertical-middle">
+        <a [routerLink]="['References']" (click)="MenuOff()">References</a>
+    </div></div>
+    <div class="a-box"><div class="vertical-middle">
+        <a [routerLink]="['Company']" (click)="MenuOff()">Company</a>
+    </div></div>
+    <div class="a-box"><div class="vertical-middle">
+        <a [routerLink]="['Blog']" (click)="MenuOff()">Blog</a>
+    </div></div>
+    <div class="a-box"><div class="vertical-middle">
+        <a [routerLink]="['Contact']" (click)="MenuOff()">Contact</a>
+    </div></div>
+</div>
+<div class="mobile-menu">
+    <div class="margin"></div>
+    <div class="content">
+        <img src="images/logos/company-logo.png" height="50px">
+    </div>
+    <div class="margin"></div>
+    <div class="menu-link" (click)="MenuToggle()">
+        <div class="box-shadow-menu" *ngIf="!showMenuScreen"></div>
+        <div class="close-menu" *ngIf="showMenuScreen">&#10006;</div>
+    </div>
+</div>
