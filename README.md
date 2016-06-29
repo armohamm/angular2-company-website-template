@@ -16,7 +16,7 @@ which is the official Angular 2 Tutorial.
 ## Prerequisites
 
 Node.js and npm are essential to Angular 2 development. 
-For more info on installing them and cloning git this repo, 
+For more info on installing them and Git cloning this repo, 
 **Check out** [Angular 2 Quickstart Source Code](https://github.com/angular/quickstart) repository.
 
 This project uses some additional npm packages, which should be installed (globally) as well. 
@@ -37,6 +37,7 @@ You can install packages globally with npm by typing:
 ```bash
 npm install -g <package>
 ```
+
 For example:
 ```bash
 npm install -g concurrently
@@ -57,12 +58,17 @@ The rest of the system and tools used:
 ## To run this project:
 
 1) Install node.js and npm
+
 2) Install all the packages globally
+
 3) Clone this Git repository.
+
 4) Go to repository's folder and run 
+
 ```bash
 npm install
 ```
+
 5) Run the project
 ```bash
 npm start
