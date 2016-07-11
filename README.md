@@ -95,3 +95,43 @@ are set to **package.json**, **tsconfig.json** and **systemjs.config.js** files.
 ## More info
 
 Please be free to ask. I can be contacted via email.
+
+##How to setup Visual Studio Code Debugging
+
+This project can be debugged with Visual Studio Code editor and Google Chrome browser. It has preconfigured settings for Vs Code debugger
+in .vscode/launch.json file.
+
+Link to [VS Code Chrome Debug extension](https://github.com/Microsoft/vscode-chrome-debug) in GitHub.
+
+First you need to install Chrome Debugging extension to VS Code using this [tutorial](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code).
+
+After that, you will have to change all the Chrome Shorcuts at your computer to set Chrome with remote debugging enabled.
+To do this, follow these instructions:
+
+**Windows**
+
+* Right click the Chrome shortcut, and select properties
+* In the "target" field, append --remote-debugging-port=9222
+* Or in a command prompt, execute <path to chrome>/chrome.exe --remote-debugging-port=9222
+
+**OS X**
+
+* In a terminal, execute /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+
+**Linux**
+
+* In a terminal, launch google-chrome --remote-debugging-port=9222
+
+**Note** that in Windows, if you have Chrome shortcut in Windows Taskbar, unpin that. 
+After that find the original Google Chrome shortcut and make changes listed above. 
+Then pin the shortcut back to Taskbar if you wish. I am not sure if this is required step, but I did it. 
+
+Another thing in Windows: I had Chrome running in background even if I shut it down. 
+Next to the clock in hidden Tray icons I had a Chrome logo saying something like "Run Chrome in background".
+I disabled that, and after that the debugging started to work.
+
+To debug, just run npm start from command prompt like always, and in VS Code's Debug tab, 
+select if you want to 'Launch new localhost' or 'Attach with sourcemaps', and then press 'Start Debugging (F5)' button. 
+
+You can put breakpoints to lines for example in .ts files by clicking from the left of the line number. You can also add variables to watch 
+and use console.log() in your code.

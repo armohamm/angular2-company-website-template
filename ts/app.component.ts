@@ -63,7 +63,7 @@ export class AppComponent {
 
     MenuToggle() {
         this.showMenuScreen = !this.showMenuScreen;
-        console.log(this.showMenuScreen);
+        console.log("showMenuScreen: " + this.showMenuScreen);
     }
 
     MenuOff() {
