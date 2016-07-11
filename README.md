@@ -92,10 +92,6 @@ gulpfile.js     // Gulp configuration for runtime Sass->Css compiling. DO NOT ED
 This is just a guideline, so you know how to work with this project. All the configurations
 are set to **package.json**, **tsconfig.json** and **systemjs.config.js** files.
 
-## More info
-
-Please be free to ask. I can be contacted via email.
-
 ##How to setup Visual Studio Code Debugging
 
 This project can be debugged with Visual Studio Code editor and Google Chrome browser. It has preconfigured settings for Vs Code debugger
@@ -135,3 +131,7 @@ select if you want to 'Launch new localhost' or 'Attach with sourcemaps', and th
 
 You can put breakpoints to lines for example in .ts files by clicking from the left of the line number. You can also add variables to watch 
 and use console.log() in your code.
+
+## More info
+
+Please be free to ask. I can be contacted via email.
