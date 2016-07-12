@@ -19,7 +19,8 @@ Node.js and npm are essential to Angular 2 development.
 For more info on installing them and Git cloning this repo, 
 **Check out** [Angular 2 Quickstart Source Code](https://github.com/angular/quickstart) repository.
 
-This project uses some additional npm packages, which should be installed (globally) as well. 
+This project uses some additional npm packages, which should be installed as well. 
+I haven't yet checked the right way to include the packages with project but that feature is coming later.
 
 List of packages:
 ```bash
@@ -33,14 +34,19 @@ List of packages:
 All packages and their implementation are preconfigured in project's files, 
 so they are necessary to install.
 
-You can install packages globally with npm by typing:
+You can install packages  with npm by typing:
 ```bash
-npm install -g <package>
+npm install <package>
 ```
 
 For example:
 ```bash
-npm install -g concurrently
+npm install concurrently
+```
+
+You can also install packages globally by adding **-g** parameter after **install**, like so:
+```bash
+npm install -g <package>
 ```
 
 Most recent version of all packages, node.js and npm are used with this project, 
@@ -59,7 +65,7 @@ The rest of the system and tools used:
 
 1) Install node.js and npm
 
-2) Install all the packages globally
+2) Install all the packages
 
 3) Clone this Git repository.
 
